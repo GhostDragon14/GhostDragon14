@@ -1,0 +1,48 @@
+{
+  "nav": {
+    "dashboard": "Panel", "food": "Registro de Comida", "recipes": "Recetas",
+    "workouts": "Entrenamientos", "water": "Agua", "steps": "Pasos",
+    "weight": "Peso", "analytics": "Análisis", "groups": "Grupos",
+    "settings": "Configuración", "subscription": "Suscripción", "admin": "Admin",
+    "logout": "Cerrar sesión"
+  },
+  "auth": {
+    "login": "Iniciar sesión", "register": "Registrarse", "email": "Correo",
+    "password": "Contraseña", "name": "Nombre completo", "forgotPassword": "¿Olvidaste tu contraseña?",
+    "noAccount": "¿No tienes cuenta?", "hasAccount": "¿Ya tienes cuenta?",
+    "verifyEmail": "Verificar correo", "resetPassword": "Restablecer contraseña",
+    "sendResetLink": "Enviar enlace"
+  },
+  "dashboard": {
+    "title": "Panel", "today": "Resumen de hoy",
+    "calories": "Calorías", "protein": "Proteína", "carbs": "Carbohidratos", "fat": "Grasa",
+    "water": "Agua", "steps": "Pasos", "workouts": "Entrenamientos",
+    "caloriesIn": "Calorías consumidas", "caloriesBurned": "Quemadas", "net": "Neto",
+    "remaining": "Restante", "goal": "Meta"
+  },
+  "food": {
+    "title": "Registro de comida", "search": "Buscar alimentos...", "add": "Agregar",
+    "breakfast": "Desayuno", "lunch": "Almuerzo", "dinner": "Cena", "snack": "Merienda",
+    "calories": "Calorías", "protein": "Proteína", "carbs": "Carbohidratos", "fat": "Grasa",
+    "serving": "Porción", "barcode": "Escanear código", "delete": "Eliminar",
+    "noResults": "No se encontraron alimentos", "addedSuccessfully": "Alimento registrado"
+  },
+  "common": {
+    "save": "Guardar", "cancel": "Cancelar", "delete": "Eliminar", "edit": "Editar",
+    "add": "Agregar", "confirm": "Confirmar", "loading": "Cargando...", "error": "Error",
+    "success": "Éxito", "search": "Buscar", "filter": "Filtrar",
+    "close": "Cerrar", "back": "Atrás", "next": "Siguiente", "submit": "Enviar",
+    "viewAll": "Ver todo", "noData": "Sin datos disponibles"
+  },
+  "subscription": {
+    "free": "Gratis", "premium": "Premium", "premiumPlus": "Premium Plus",
+    "month": "/mes", "upgrade": "Mejorar", "current": "Plan actual",
+    "features": "Características", "manageBilling": "Gestionar facturación"
+  },
+  "settings": {
+    "title": "Configuración", "profile": "Perfil", "language": "Idioma",
+    "theme": "Tema", "light": "Claro", "dark": "Oscuro",
+    "notifications": "Notificaciones", "privacy": "Privacidad", "units": "Unidades",
+    "metric": "Métrico", "imperial": "Imperial", "goals": "Metas nutricionales"
+  }
+}

@@ -1,0 +1,29 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root { --color-bg: #f8fafc; --color-surface: #ffffff; --color-text: #1f2937; --color-border: #e5e7eb; }
+  .dark { --color-bg: #0f172a; --color-surface: #1e293b; --color-text: #f1f5f9; --color-border: #334155; }
+  body { @apply bg-gray-50 dark:bg-slate-900 text-gray-900 dark:text-slate-100 font-sans; transition: background-color 0.2s, color 0.2s; }
+  * { @apply border-gray-200 dark:border-slate-700; }
+}
+
+@layer components {
+  .card { @apply bg-white dark:bg-slate-800 rounded-xl shadow-sm border border-gray-100 dark:border-slate-700 p-6; }
+  .btn-primary { @apply bg-primary-500 hover:bg-primary-600 text-white font-semibold px-4 py-2 rounded-lg transition-colors duration-200 disabled:opacity-50 disabled:cursor-not-allowed; }
+  .btn-secondary { @apply bg-gray-100 dark:bg-slate-700 hover:bg-gray-200 dark:hover:bg-slate-600 text-gray-700 dark:text-slate-300 font-semibold px-4 py-2 rounded-lg transition-colors duration-200; }
+  .btn-danger { @apply bg-red-500 hover:bg-red-600 text-white font-semibold px-4 py-2 rounded-lg transition-colors; }
+  .input { @apply w-full px-4 py-2.5 rounded-lg border border-gray-300 dark:border-slate-600 bg-white dark:bg-slate-700 text-gray-900 dark:text-slate-100 placeholder-gray-400 dark:placeholder-slate-400 focus:outline-none focus:ring-2 focus:ring-primary-500 focus:border-transparent transition-colors; }
+  .label { @apply block text-sm font-medium text-gray-700 dark:text-slate-300 mb-1.5; }
+  .badge { @apply inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium; }
+  .page-title { @apply text-2xl font-bold text-gray-900 dark:text-white; }
+  .section-title { @apply text-lg font-semibold text-gray-800 dark:text-slate-200; }
+}
+
+.animate-fadeIn { animation: fadeIn 0.3s ease-in-out; }
+@keyframes fadeIn { from { opacity: 0; transform: translateY(-8px); } to { opacity: 1; transform: translateY(0); } }
+
+::-webkit-scrollbar { width: 6px; } 
+::-webkit-scrollbar-track { @apply bg-gray-100 dark:bg-slate-800; }
+::-webkit-scrollbar-thumb { @apply bg-gray-300 dark:bg-slate-600 rounded-full; }

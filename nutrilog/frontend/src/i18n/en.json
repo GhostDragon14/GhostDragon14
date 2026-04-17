@@ -1,0 +1,47 @@
+{
+  "nav": {
+    "dashboard": "Dashboard", "food": "Food Log", "recipes": "Recipes",
+    "workouts": "Workouts", "water": "Water", "steps": "Steps",
+    "weight": "Weight", "analytics": "Analytics", "groups": "Groups",
+    "settings": "Settings", "subscription": "Subscription", "admin": "Admin",
+    "logout": "Logout"
+  },
+  "auth": {
+    "login": "Login", "register": "Sign Up", "email": "Email", "password": "Password",
+    "name": "Full Name", "forgotPassword": "Forgot password?", "noAccount": "Don't have an account?",
+    "hasAccount": "Already have an account?", "verifyEmail": "Verify Email",
+    "resetPassword": "Reset Password", "sendResetLink": "Send Reset Link"
+  },
+  "dashboard": {
+    "title": "Dashboard", "today": "Today's Summary",
+    "calories": "Calories", "protein": "Protein", "carbs": "Carbs", "fat": "Fat",
+    "water": "Water", "steps": "Steps", "workouts": "Workouts",
+    "caloriesIn": "Calories In", "caloriesBurned": "Burned", "net": "Net",
+    "remaining": "Remaining", "goal": "Goal"
+  },
+  "food": {
+    "title": "Food Log", "search": "Search foods...", "add": "Add Food",
+    "breakfast": "Breakfast", "lunch": "Lunch", "dinner": "Dinner", "snack": "Snack",
+    "calories": "Calories", "protein": "Protein", "carbs": "Carbs", "fat": "Fat",
+    "serving": "Serving", "barcode": "Scan Barcode", "delete": "Delete",
+    "noResults": "No foods found", "addedSuccessfully": "Food logged successfully"
+  },
+  "common": {
+    "save": "Save", "cancel": "Cancel", "delete": "Delete", "edit": "Edit",
+    "add": "Add", "confirm": "Confirm", "loading": "Loading...", "error": "Error",
+    "success": "Success", "search": "Search", "filter": "Filter",
+    "close": "Close", "back": "Back", "next": "Next", "submit": "Submit",
+    "viewAll": "View All", "noData": "No data available"
+  },
+  "subscription": {
+    "free": "Free", "premium": "Premium", "premiumPlus": "Premium Plus",
+    "month": "/month", "upgrade": "Upgrade", "current": "Current Plan",
+    "features": "Features", "manageBilling": "Manage Billing"
+  },
+  "settings": {
+    "title": "Settings", "profile": "Profile", "language": "Language",
+    "theme": "Theme", "light": "Light", "dark": "Dark",
+    "notifications": "Notifications", "privacy": "Privacy", "units": "Units",
+    "metric": "Metric", "imperial": "Imperial", "goals": "Nutrition Goals"
+  }
+}

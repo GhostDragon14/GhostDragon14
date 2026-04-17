@@ -1,0 +1,48 @@
+{
+  "nav": {
+    "dashboard": "Tableau de bord", "food": "Journal alimentaire", "recipes": "Recettes",
+    "workouts": "Entraînements", "water": "Eau", "steps": "Pas",
+    "weight": "Poids", "analytics": "Analyses", "groups": "Groupes",
+    "settings": "Paramètres", "subscription": "Abonnement", "admin": "Admin",
+    "logout": "Déconnexion"
+  },
+  "auth": {
+    "login": "Connexion", "register": "S'inscrire", "email": "Email",
+    "password": "Mot de passe", "name": "Nom complet", "forgotPassword": "Mot de passe oublié?",
+    "noAccount": "Pas de compte?", "hasAccount": "Déjà un compte?",
+    "verifyEmail": "Vérifier l'email", "resetPassword": "Réinitialiser",
+    "sendResetLink": "Envoyer le lien"
+  },
+  "dashboard": {
+    "title": "Tableau de bord", "today": "Résumé du jour",
+    "calories": "Calories", "protein": "Protéines", "carbs": "Glucides", "fat": "Lipides",
+    "water": "Eau", "steps": "Pas", "workouts": "Entraînements",
+    "caloriesIn": "Calories consommées", "caloriesBurned": "Brûlées", "net": "Net",
+    "remaining": "Restant", "goal": "Objectif"
+  },
+  "food": {
+    "title": "Journal alimentaire", "search": "Rechercher des aliments...", "add": "Ajouter",
+    "breakfast": "Petit-déjeuner", "lunch": "Déjeuner", "dinner": "Dîner", "snack": "Collation",
+    "calories": "Calories", "protein": "Protéines", "carbs": "Glucides", "fat": "Lipides",
+    "serving": "Portion", "barcode": "Scanner", "delete": "Supprimer",
+    "noResults": "Aucun aliment trouvé", "addedSuccessfully": "Aliment enregistré"
+  },
+  "common": {
+    "save": "Enregistrer", "cancel": "Annuler", "delete": "Supprimer", "edit": "Modifier",
+    "add": "Ajouter", "confirm": "Confirmer", "loading": "Chargement...", "error": "Erreur",
+    "success": "Succès", "search": "Rechercher", "filter": "Filtrer",
+    "close": "Fermer", "back": "Retour", "next": "Suivant", "submit": "Soumettre",
+    "viewAll": "Voir tout", "noData": "Aucune donnée disponible"
+  },
+  "subscription": {
+    "free": "Gratuit", "premium": "Premium", "premiumPlus": "Premium Plus",
+    "month": "/mois", "upgrade": "Améliorer", "current": "Plan actuel",
+    "features": "Fonctionnalités", "manageBilling": "Gérer la facturation"
+  },
+  "settings": {
+    "title": "Paramètres", "profile": "Profil", "language": "Langue",
+    "theme": "Thème", "light": "Clair", "dark": "Sombre",
+    "notifications": "Notifications", "privacy": "Confidentialité", "units": "Unités",
+    "metric": "Métrique", "imperial": "Impérial", "goals": "Objectifs nutritionnels"
+  }
+}
