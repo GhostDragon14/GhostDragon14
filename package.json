@@ -1,0 +1,10 @@
+{
+  "name": "nutrilog-monorepo",
+  "private": true,
+  "scripts": {
+    "dev:backend": "cd nutrilog/backend && npm run dev",
+    "dev:frontend": "cd nutrilog/frontend && npm run dev",
+    "install:all": "cd nutrilog/backend && npm install && cd ../frontend && npm install",
+    "build:frontend": "cd nutrilog/frontend && npm run build"
+  }
+}
