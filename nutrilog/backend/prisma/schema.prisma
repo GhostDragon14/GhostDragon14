@@ -97,52 +97,52 @@ model User {
   groupMemberships      GroupMember[]
   challengeParticipants ChallengeParticipant[]
   sentInvites           GroupInvite[]          @relation("SentInvites")
-  healthRecommendations HealthRecommendation[]
+  notifications         Notification[]
 
   @@index([email])
 }
 
 model NutritionGoal {
-  id           String   @id @default(uuid())
-  userId       String   @unique
-  user         User     @relation(fields: [userId], references: [id], onDelete: Cascade)
-  calories     Int      @default(2000)
-  protein      Int      @default(150)
-  carbs        Int      @default(250)
-  fat          Int      @default(65)
-  fiber        Int      @default(25)
-  sodium       Int      @default(2300)
-  waterMl      Int      @default(2000)
-  steps        Int      @default(10000)
-  weightTarget Float?
-  activityLevel String  @default("moderate")
-  createdAt    DateTime @default(now())
-  updatedAt    DateTime @updatedAt
+  id            String   @id @default(uuid())
+  userId        String   @unique
+  user          User     @relation(fields: [userId], references: [id], onDelete: Cascade)
+  calories      Int      @default(2000)
+  protein       Int      @default(150)
+  carbs         Int      @default(250)
+  fat           Int      @default(65)
+  fiber         Int      @default(25)
+  sodium        Int      @default(2300)
+  waterMl       Int      @default(2000)
+  steps         Int      @default(10000)
+  weightTarget  Float?
+  activityLevel String   @default("moderate")
+  createdAt     DateTime @default(now())
+  updatedAt     DateTime @updatedAt
 }
 
 model FoodLog {
-  id          String   @id @default(uuid())
-  userId      String
-  user        User     @relation(fields: [userId], references: [id], onDelete: Cascade)
-  foodName    String
-  brandName   String?
-  calories    Float
-  protein     Float    @default(0)
-  carbs       Float    @default(0)
-  fat         Float    @default(0)
-  fiber       Float    @default(0)
-  sugar       Float    @default(0)
-  sodium      Float    @default(0)
-  saturatedFat Float   @default(0)
-  cholesterol Float    @default(0)
-  serving     Float
-  servingUnit String
-  mealType    MealType
-  date        DateTime
-  barcode     String?
-  source      String   @default("manual")
-  externalId  String?
-  createdAt   DateTime @default(now())
+  id           String   @id @default(uuid())
+  userId       String
+  user         User     @relation(fields: [userId], references: [id], onDelete: Cascade)
+  foodName     String
+  brandName    String?
+  calories     Float
+  protein      Float    @default(0)
+  carbs        Float    @default(0)
+  fat          Float    @default(0)
+  fiber        Float    @default(0)
+  sugar        Float    @default(0)
+  sodium       Float    @default(0)
+  saturatedFat Float    @default(0)
+  cholesterol  Float    @default(0)
+  serving      Float
+  servingUnit  String
+  mealType     MealType
+  date         DateTime
+  barcode      String?
+  source       String   @default("manual")
+  externalId   String?
+  createdAt    DateTime @default(now())
 
   @@index([userId, date])
 }
@@ -190,8 +190,8 @@ model Recipe {
   name         String
   description  String?
   servings     Int                @default(1)
-  prepTime     Int?               // minutes
-  cookTime     Int?               // minutes
+  prepTime     Int?
+  cookTime     Int?
   calories     Float
   protein      Float              @default(0)
   carbs        Float              @default(0)
@@ -209,44 +209,44 @@ model Recipe {
 }
 
 model RecipeIngredient {
-  id        String  @id @default(uuid())
-  recipeId  String
-  recipe    Recipe  @relation(fields: [recipeId], references: [id], onDelete: Cascade)
-  name      String
-  amount    Float
-  unit      String
-  calories  Float
-  protein   Float   @default(0)
-  carbs     Float   @default(0)
-  fat       Float   @default(0)
+  id       String @id @default(uuid())
+  recipeId String
+  recipe   Recipe @relation(fields: [recipeId], references: [id], onDelete: Cascade)
+  name     String
+  amount   Float
+  unit     String
+  calories Float
+  protein  Float  @default(0)
+  carbs    Float  @default(0)
+  fat      Float  @default(0)
 }
 
 model Workout {
-  id         String          @id @default(uuid())
-  userId     String
-  user       User            @relation(fields: [userId], references: [id], onDelete: Cascade)
-  name       String
-  category   WorkoutCategory
-  duration   Int             // minutes
-  calories   Float           @default(0)
-  notes      String?
-  date       DateTime
-  completed  Boolean         @default(true)
-  source     String          @default("manual")
-  exercises  Exercise[]
-  createdAt  DateTime        @default(now())
+  id        String          @id @default(uuid())
+  userId    String
+  user      User            @relation(fields: [userId], references: [id], onDelete: Cascade)
+  name      String
+  category  WorkoutCategory
+  duration  Int
+  calories  Float           @default(0)
+  notes     String?
+  date      DateTime
+  completed Boolean         @default(true)
+  source    String          @default("manual")
+  exercises Exercise[]
+  createdAt DateTime        @default(now())
 
   @@index([userId, date])
 }
 
 model Exercise {
-  id         String  @id @default(uuid())
-  workoutId  String
-  workout    Workout @relation(fields: [workoutId], references: [id], onDelete: Cascade)
-  name       String
-  sets       Int?
-  reps       Int?
-  weightKg   Float?
+  id          String  @id @default(uuid())
+  workoutId   String
+  workout     Workout @relation(fields: [workoutId], references: [id], onDelete: Cascade)
+  name        String
+  sets        Int?
+  reps        Int?
+  weightKg    Float?
   durationSec Int?
   distanceKm  Float?
   restSec     Int?
@@ -254,17 +254,17 @@ model Exercise {
 }
 
 model WorkoutSchedule {
-  id         String          @id @default(uuid())
-  userId     String
-  user       User            @relation(fields: [userId], references: [id], onDelete: Cascade)
-  name       String
-  category   WorkoutCategory
-  dayOfWeek  Int             // 0=Sunday, 6=Saturday
-  time       String?         // HH:MM format
-  notes      String?
-  completed  Boolean         @default(false)
-  weekStart  DateTime
-  createdAt  DateTime        @default(now())
+  id        String          @id @default(uuid())
+  userId    String
+  user      User            @relation(fields: [userId], references: [id], onDelete: Cascade)
+  name      String
+  category  WorkoutCategory
+  dayOfWeek Int
+  time      String?
+  notes     String?
+  completed Boolean         @default(false)
+  weekStart DateTime
+  createdAt DateTime        @default(now())
 
   @@index([userId, weekStart])
 }
@@ -289,7 +289,7 @@ model Group {
   description String?
   goal        FitnessGoal
   isPublic    Boolean       @default(true)
-  inviteCode  String        @unique @default(uuid())
+  inviteCode  String        @unique
   createdBy   String
   bannerUrl   String?
   members     GroupMember[]
@@ -367,17 +367,7 @@ model Disease {
   updatedAt    DateTime @updatedAt
 }
 
-model HealthRecommendation {
-  id        String   @id @default(uuid())
-  userId    String
-  user      User     @relation(fields: [userId], references: [id], onDelete: Cascade)
-  diseaseId String
-  disease   Disease  @relation(fields: [diseaseId], references: [id])
-  notes     String?
-  createdAt DateTime @default(now())
-}
-
-model HealthRecommendation {
+model Notification {
   id        String   @id @default(uuid())
   userId    String
   user      User     @relation(fields: [userId], references: [id], onDelete: Cascade)
